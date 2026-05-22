@@ -1,0 +1,32 @@
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+description='''
+Standalone NeoForge admin/staff commands for multiplayer servers: teleportation,
+moderation, warps, homes, kits, seeinv, whois, and more. PermissionAPI nodes
+(admincommands.command.*) with optional LuckPerms. Server-side; no content-mod dependency.
+'''
+
+[[mixins]]
+config="${mod_id}.mixins.json"
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[26.1.2,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# LuckPerms is an optional integration — present it as discouraged-absent? No:
+# we simply use NeoForge's PermissionAPI, which LuckPerms overrides automatically
+# when installed. No hard or soft dependency declaration is required.

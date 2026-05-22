@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "kingdom.admincommands.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EntityBroadcastVanishMixin",
+    "CommandsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
